@@ -5,10 +5,3 @@ C:\Users\User\Desktop\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.Pr
 C:\Users\User\Desktop\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.csproj.GenerateResource.Cache
 C:\Users\User\Desktop\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.exe
 C:\Users\User\Desktop\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.pdb
-D:\Users\User\Documents\GitHub\Ori-s-project\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.exe
-D:\Users\User\Documents\GitHub\Ori-s-project\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.pdb
-D:\Users\User\Documents\GitHub\Ori-s-project\Ori_s_project\Ori_s_project\bin\Debug\Ori_s_project.exe
-D:\Users\User\Documents\GitHub\Ori-s-project\Ori_s_project\Ori_s_project\bin\Debug\Ori_s_project.pdb
-D:\Users\User\Documents\GitHub\Ori-s-project\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.Form1.resources
-D:\Users\User\Documents\GitHub\Ori-s-project\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.Properties.Resources.resources
-D:\Users\User\Documents\GitHub\Ori-s-project\Ori_s_project\Ori_s_project\obj\x86\Debug\Ori_s_project.csproj.GenerateResource.Cache
