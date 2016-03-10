@@ -3,7 +3,7 @@ from SliceImage import *
 from SessionWithClient import * 
 
 CLIENTS_LIMIT = 50
-GUI_PORT = 12328
+GUI_PORT = 12321
 class PythonServer(threading.Thread):
 	listenerSock = None
 	startFlag = False
@@ -47,12 +47,12 @@ class PythonServer(threading.Thread):
 			
 		
 
-	def __init__(self, gui):
+	def __init__(self, gui, listenerPort, slicemode):
 	
 		threading.Thread.__init__(self)
 		self.gui = gui
-		self.listenerPort = GUI_PORT
-		self.slicemode = 'square'
+		self.listenerPort = listenerPort
+		self.slicemode = slicemode
 		self.crypto_object = MyCrypto()
 		
 class GuiHandler(threading.Thread):   
@@ -95,7 +95,7 @@ class GuiHandler(threading.Thread):
         else:
             self.close_all_clients()
 
-# the function who stops the broadcast
+# the function who stopes the broadcast
     def  stopBroadcast(self, operands):
         if self.slice_image != None:
             self.slice_image.stopBroadcast = True
@@ -114,19 +114,18 @@ class GuiHandler(threading.Thread):
         while True:
                 # Wait message from GUI 
                 data = self.guiSock.recv(1024)
-                print "#########" + str(data)
                 if len(data) > 0 :
                         items = data.split("#")   # Operation
                         self.state_machine[items[0]](items[1])   # items[1]  -  Operands                        
 
-def main():
+def main(args):
 	try:  
 		guiHandler = GuiHandler()            #  connection to GUI process
 		guiHandler.start()            		#  start thread loop for session with GUI         
-		guiHandler.pythonServer = PythonServer(guiHandler)  
+		guiHandler.pythonServer = PythonServer(guiHandler, int(args[0]), args[1])  
 		guiHandler.pythonServer.start() 
 	except socket.error , e:
 		print e   
 
 if __name__ == "__main__":
-     main()
+     main(sys.argv[1:])

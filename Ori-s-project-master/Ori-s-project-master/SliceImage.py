@@ -24,7 +24,7 @@ class SliceImage(threading.Thread):
         self.python_server = python_server
         self.name_image = name_image
         self.form = python_server.slicemode
-        self.formation = {'square': self.Square, 'BtB': self.BtB}
+        self.formation = {'snake': self.Snake, 'square': self.Square, 'BtB': self.BtB}
 
     # sending picture to client
     def send_image(self,picture, ip):
@@ -152,7 +152,40 @@ class SliceImage(threading.Thread):
             lower += Nhe
         return list_images
 
+    #new snake width and height
+    #def NewSizeSnake(self, height, width, num):
+    #        Nhe = height
+    #        Nwi = width
+    #        countW = 1
+    #        countH = 1
+    #        Nhe = height
+    #        Nwi = width/num
+    #        countW = num
+    #        countH = 1
+    #return (Nhe, Nwi, countW, countH)
 
+    #long slicing       
+    #def Snake(self, pic, num):
+    #        width, height = pic.size
+    #        Nhe, Nwi, Wcounts, Hcounts = self.NewSizeSnake(height, width, num)
+    #        left = 0
+    #        upper = 0
+    #        right = Nwi
+    #        lower = Nhe
+    #        count = 1
+    #        list_images = []
+    #for Hcount in xrange(Hcounts):
+    #            left = 0
+    #            right = Nwi
+    #for Wcount in xrange (Wcounts):
+    #                box = (left, upper, right, lower)
+    #                list_images.append(pic.crop(box))
+    #                left += Nwi
+    #                right += Nwi
+    #                count += 1
+    #            upper += Nhe
+    #            lower += Nhe
+    #return list_images
 
     #new back to back width and height
     def NewSizeBtB(self, height, width):
